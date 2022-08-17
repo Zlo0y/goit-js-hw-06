@@ -10,11 +10,12 @@ const divBox = document.querySelector('#boxes');
 function createBoxes(amount) {
   let divParam = 30;
   const arrBoxes = [];
-  for (let i = 0; i <= amount; i += 1){
+  for (let i = 1; i <= amount; i += 1){
+    const randomColor = getRandomHexColor();
     const box = document.createElement('div');
     box.style.width = `${divParam}px`;
     box.style.height = `${divParam}px`;
-    box.style.backgroundColor = getRandomHexColor();
+    box.style.backgroundColor = randomColor;
     arrBoxes.push(box);
     divParam += 10;
   }
